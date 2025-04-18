@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فري فاير - GAKOOR</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            color: #ff3c3c;
+        }
+        nav {
+            background-color: #000000;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff3c3c;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ff3c3c;
+            padding-bottom: 5px;
+        }
+        .guide {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+        .video, .image {
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
+        .download {
+            background-color: #ff3c3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 100px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            width: 220px;
+            height: auto;
+            border-radius: 10px 0 0 10px;
+        }
+        .sidebar h3 {
+            color: #ff3c3c;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>دليل فري فاير - GAKOOR</h1>
+    </header>
+
+    <nav>
+        <a href="#tips">نصائح</a>
+        <a href="#weapons">الأسلحة</a>
+        <a href="#characters">الشخصيات</a>
+        <a href="#settings">الإعدادات</a>
+    </nav>
+
+    <div class="sidebar">
+        <h3>القائمة الجانبية</h3>
+        <a href="#">الإعدادات</a>
+        <a href="#">تسجيل الدخول بجوجل</a>
+        <a href="#">المصمم: GAKOOR</a>
+        <a href="https://github.com/gakoor007" target="_blank">حسابي على GitHub</a>
+    </div>
+
+    <div class="container">
+        <div class="section" id="tips">
+            <h2>نصائح للمبتدئين</h2>
+            <div class="guide">
+                <p>ابدأ بلوت سريع، تجنب القتال في البداية حتى تجمع عتاد جيد. احرص على استخدام سماعات لسماع خطوات الأعداء.</p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="نصيحة فري فاير"></iframe>
+                </div>
+                <a class="download" href="#">تحميل ملف الشرح PDF</a>
+            </div>
+        </div>
+
+        <div class="section" id="weapons">
+            <h2>الأسلحة</h2>
+            <div class="guide">
+                <p>أفضل الأسلحة في القتال القريب هي MP40 وM1014، بينما في المسافات المتوسطة استخدم SCAR أو AK.</p>
+                <div class="image">
+                    <img src="https://via.placeholder.com/400x200/ff3c3c/ffffff?text=صورة+سلاح" alt="سلاح" style="max-width:100%;border-radius:10px;">
+                </div>
+                <a class="download" href="#">تحميل جدول مقارنة الأسلحة</a>
+            </div>
+        </div>
+
+        <div class="section" id="characters">
+            <h2>الشخصيات</h2>
+            <div class="guide">
+                <p>شخصية ألوك تعطي زيادة سرعة واستعادة دم، شخصية كي تعطي نقاط EP، اختر حسب أسلوب لعبك.</p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="شخصيات فري فاير"></iframe>
+                </div>
+                <a class="download" href="#">تحميل قائمة قدرات الشخصيات</a>
+            </div>
+        </div>
+
+        <div class="section" id="settings">
+            <h2>إعدادات احترافية</h2>
+            <div class="guide">
+                <p>حساسية الرأس 90-100، دقة التصويب 80، زر الإطلاق متوسط الحجم. جرب وعدل حسب راحة يدك.</p>
+                <a class="download" href="#">تحميل ملف إعدادات جاهزة</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة &copy; GAKOOR 2025
+    </footer>
+</body>
+</html>

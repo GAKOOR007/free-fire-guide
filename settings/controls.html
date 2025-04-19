@@ -1,18 +1,156 @@
-إعدادات التحكم | Free Fire Guide body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(145deg, #0f0f0f, #1c1c1c); color: #fff; padding: 2rem; backdrop-filter: blur(10px); } .section { margin-bottom: 50px; padding: 20px; border-radius: 15px; background: rgba(255, 255, 255, 0.05); box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); transition: transform 0.5s ease; } .section:hover { transform: scale(1.02); } h2 { color: #ff4444; } img { max-width: 100%; border-radius: 10px; margin-top: 10px; } table { width: 100%; border-collapse: collapse; margin-top: 20px; } table, th, td { border: 1px solid #ff4444; } th, td { padding: 10px; text-align: center; } a.button { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #ff4444; color: #fff; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; } a.button:hover { background: #ff2222; } إعدادات التحكم في Free Fire 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إعدادات التحكم - Free Fire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: white;
+      padding: 30px;
+      margin: 0;
+    }
 
-أساسيات التحكم 
+    h1 {
+      font-size: 3rem;
+      color: #ff3c00;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff3c00;
+      animation: fadeInDown 1.2s ease;
+    }
 
-إعدادات التحكم الجيدة تساعدك على تحسين أدائك في القتال. اختر تخطيط الأزرار المناسب لك وخصصه حسب أسلوبك.
+    h2 {
+      color: #e63946;
+      border-bottom: 2px solid #e63946;
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease;
+    }
 
-<table> <thead> <tr> <th>الوظيفة</th> <th>الإعداد</th> </tr> </thead> <tbody> <tr> <td>الرمي</td> <td>زر كبير في اليمين لسهولة الضغط</td> </tr> <tr> <td>الانحناء</td> <td>بالقرب من زر الإطلاق</td> </tr> </tbody> </table> <a href="#التحكم-المتقدم" class="button">اقرأ عن التحكم المتقدم</a> 
+    p {
+      line-height: 1.9;
+      font-size: 18px;
+      animation: fadeInUp 1.4s ease;
+    }
 
-التحكم المتقدم 
+    ul {
+      margin-left: 20px;
+      animation: fadeInUp 1.6s ease;
+    }
 
-التحكم المتقدم يشمل استخدام إعدادات الجيروسكوب، وتقنيات مثل "Quick Scope" أو إطلاق النار السريع مع التصويب الدقيق، وهو ما يميز اللاعبين المحترفين.
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeIn 1.8s ease;
+    }
 
-شاهد هذا الفيديو للحصول على شرح عملي:
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
 
-مشاهدة الشرح 
+    th {
+      background-color: #ff3c00;
+    }
 
-فروع قادمة التحكم بالهاتف التحكم بالمحاكي 
+    img {
+      max-width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+      animation: zoomIn 1.5s ease;
+    }
 
+    .button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #ff3c00;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease;
+    }
+
+    .button:hover {
+      background-color: #d22e00;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>إعدادات التحكم في Free Fire</h1>
+
+  <p>إعدادات التحكم هي أساس التفوق في Free Fire. اللاعب المحترف دائمًا يخصص الأزرار حسب سرعته وراحته في اللعب. في هذا القسم سنتحدث عن أهم النصائح والإعدادات التي يجب أن تقوم بها لتحسين تحكمك وتفاعل أصابعك مع الأحداث السريعة.</p>
+
+  <h2>التحكم الكلاسيكي مقابل المتقدم</h2>
+  <p>التحكم الكلاسيكي مناسب للمبتدئين، لكنه محدود. التحكم المتقدم يمنحك الحرية في تخصيص الأزرار مثل زر القفز، الركض، السلاح، القنابل وغيرهم حسب حجم يدك أو جهازك.</p>
+
+  <img src="https://i.imgur.com/Xm7qVPj.jpg" alt="إعدادات تحكم Free Fire">
+
+  <h2>الجدول التالي يوضح الفروقات بين الأوضاع:</h2>
+  <table>
+    <tr>
+      <th>الميزة</th>
+      <th>التحكم الكلاسيكي</th>
+      <th>التحكم المتقدم</th>
+    </tr>
+    <tr>
+      <td>تخصيص الأزرار</td>
+      <td>محدود</td>
+      <td>كامل</td>
+    </tr>
+    <tr>
+      <td>السرعة في اللعب</td>
+      <td>متوسطة</td>
+      <td>عالية</td>
+    </tr>
+    <tr>
+      <td>الراحة</td>
+      <td>متوسطة</td>
+      <td>حسب التخصيص</td>
+    </tr>
+  </table>
+
+  <h2>أنواع تحكم ينصح بها المحترفون</h2>
+  <ul>
+    <li>نظام 4 أصابع: أفضل للاعبين السريعين.</li>
+    <li>نظام 3 أصابع: متوازن بين السرعة والراحة.</li>
+    <li>نظام 2 أصبع: للمبتدئين.</li>
+  </ul>
+
+  <h2>نصائح إضافية</h2>
+  <p>قم بتمرين أصابعك يوميًا على أماكن الأزرار الجديدة بعد تخصيصها، وتدرب في الوضع التدريبي على الاستجابة السريعة لتكون محترفًا في المواجهات.</p>
+
+  <button class="button" onclick="window.open('https://youtu.be/Ok5hrfeaMGo?si=IDeKyYS5aQ4KVf8Z', '_blank')">مشاهدة شرح عملي</button>
+
+</body>
+</html>

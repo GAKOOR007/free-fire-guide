@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.overlay {
+  text-align: center;
+  color: white;
+  padding-top: 15%;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 24px;
+  background: red;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.2em;
+}
+
+.buttons a:hover {
+  background: black;
+}

@@ -1,0 +1,39 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: black;
+}
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+.logo {
+  width: 100px;
+  animation: rotateLogo 5s linear infinite;
+}
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+nav a, nav button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}

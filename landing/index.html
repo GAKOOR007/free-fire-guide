@@ -1,0 +1,42 @@
+// مشروع موقع Free Fire Guide الفخم جداً - المستوى الخارق
+// سيتم بناء الموقع باستخدام React + TailwindCSS + Framer Motion + React Router + Context API
+// وسندمج فيديوهات خلفية وتأثيرات رهيبة، مع تصميم مستوحى من ألعاب AAA
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Home from './pages/Home';
+import Settings from './pages/Settings';
+import Controls from './pages/Controls';
+import Logo from './assets/logo.gif'; // شعار متحرك
+import VideoBackground from './components/VideoBackground';
+import ThemeSwitcher from './components/ThemeSwitcher';
+
+export default function App() {
+  return (
+    <Router>
+      <div className="relative w-full h-screen overflow-hidden">
+        <VideoBackground />
+        <nav className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-60 flex justify-between items-center p-4 shadow-xl">
+          <Link to="/" className="flex items-center gap-2">
+            <img src={Logo} alt="Free Fire Guide Logo" className="w-12 h-12 animate-pulse" />
+            <h1 className="text-red-500 text-2xl font-extrabold">Free Fire Guide</h1>
+          </Link>
+          <div className="flex gap-4 text-white">
+            <Link to="/controls">التحكم</Link>
+            <Link to="/settings">الإعدادات</Link>
+            <ThemeSwitcher />
+          </div>
+        </nav>
+
+        <div className="relative z-10 pt-20">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/settings/*" element={<Settings />} />
+            <Route path="/controls/*" element={<Controls />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
+}

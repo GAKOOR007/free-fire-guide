@@ -1,188 +1,142 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Fire Guide | GAKOOR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Fire Guide</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Cairo', sans-serif;
+    /* reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      color: #fff;
     }
 
-    body {
-      background: black;
-      overflow-x: hidden;
-      color: white;
-    }
-
-    video.bg-video {
+    /* خلفية فيديو */
+    .video-bg {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
       z-index: -1;
     }
 
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(5px);
-      z-index: 0;
+    /* تأثير الزجاج */
+    .glass {
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      margin-top: 5%;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      font-size: 28px;
+      font-size: 48px;
+      text-align: center;
       font-weight: bold;
-      color: red;
+      color: #ff3c3c;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px red;
+      animation: pulse 2s infinite ease-in-out;
     }
 
-    .logo img {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-      animation: spin 4s linear infinite;
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); text-shadow: 0 0 10px red; }
+      50% { transform: scale(1.05); text-shadow: 0 0 20px red; }
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    nav {
-      display: flex;
+    .section-links {
+      display: grid;
       gap: 20px;
     }
 
-    nav a {
-      color: white;
+    .section-links a {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
       text-decoration: none;
-      font-weight: 500;
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: red;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 80vh;
-      text-align: center;
-      z-index: 1;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      margin-bottom: 20px;
-      color: white;
-    }
-
-    .hero p {
       font-size: 20px;
-      color: #ccc;
-      margin-bottom: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+      display: block;
+      text-align: center;
     }
 
-    .hero a {
-      background: red;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .hero a:hover {
-      background: darkred;
+    .section-links a:hover {
+      background: rgba(255, 60, 60, 0.7);
+      transform: scale(1.03);
     }
 
     .theme-toggle {
       position: fixed;
       top: 20px;
-      right: 20px;
-      z-index: 1;
+      left: 20px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
     }
 
-    .theme-toggle button {
-      padding: 10px 15px;
-      border: none;
-      background: white;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 8px;
-    }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="bg-video">
-    <source src="https://cdn.coverr.co/videos/coverr-gamer-guy-6996/1080p.mp4" type="video/mp4">
+
+  <!-- فيديو خلفية -->
+  <video autoplay loop muted class="video-bg">
+    <source src="https://cdn.pixabay.com/vimeo/807159042/free-fire-126192.mp4?width=1280&hash=da35a56958ac5927b502e7e3e38fdd1db37782d0" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
   </video>
-  <div class="overlay"></div>
-  <div class="theme-toggle">
-    <button onclick="toggleTheme()">تبديل الوضع</button>
-  </div>
 
-  <header>
-    <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/3208/3208707.png" alt="logo">
-      GAKOOR
+  <!-- زر تبديل الوضع -->
+  <button class="theme-toggle" onclick="toggleTheme()">تبديل الوضع</button>
+
+  <!-- المحتوى -->
+  <div class="glass">
+    <div class="logo">Free Fire Guide</div>
+    <div class="section-links">
+      <a href="guides/index.html">الشروحات</a>
+      <a href="settings/index.html">الإعدادات</a>
+      <a href="controls/index.html">التحكم</a>
+      <a href="#">نصائح احترافية</a>
+      <a href="#">أفضل الأسلحة</a>
+      <a href="#">خريطة الأماكن</a>
+      <a href="#">إعدادات الجيروسكوب</a>
+      <a href="#">تخصيص HUD</a>
+      <a href="#">أفضل سكريبتات الماكرو</a>
+      <a href="#">استراتيجيات الفوز</a>
     </div>
-    <nav>
-      <a href="#">الرئيسية</a>
-      <a href="#sections">الأقسام</a>
-      <a href="#about">عنّا</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>دليل فري فاير الشامل</h1>
-    <p>كل ما تحتاجه لتصبح محترفًا في اللعبة - إعدادات، شروحات، نصائح، وأكثر</p>
-    <a href="#sections">ابدأ الآن</a>
-  </section>
+  </div>
 
   <script>
     function toggleTheme() {
-      document.body.classList.toggle("light-mode");
+      document.body.classList.toggle('light');
+      const video = document.querySelector('.video-bg');
+      if (document.body.classList.contains('light')) {
+        document.body.style.background = '#fff';
+        document.body.style.color = '#000';
+        video.style.display = 'none';
+      } else {
+        document.body.style.background = '#000';
+        document.body.style.color = '#fff';
+        video.style.display = 'block';
+      }
     }
   </script>
 </body>
